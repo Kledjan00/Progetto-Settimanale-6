@@ -1,17 +1,40 @@
 // Atelier — Week Project Settimana VI
-// Definisci qui le tue variabili, mixin, override Bootstrap.
 
 
-// === Variabili (definisci $brand-primary, $brand-secondary, $radius-base, ecc.) ===
+// ---- VARIABILI ----
+
+// Marrone dello studio e marrone scuro di navbar e footer
+$brand-primary: hsl(20, 30%, 35%);
+$brand-secondary: hsl(20, 20%, 15%);
+
+// Il marrone del bottone col mouse sopra
+$brand-hover: hsl(20, 30%, 27%);
+
+// Il crema dei link nel footer col mouse sopra
+$link-footer-hover: hsl(40, 30%, 90%);
+
+$radius-base: 8px;
+
+// L'ombra delle card, da ferma e col mouse sopra
+$shadow-card: 0 2px 6px rgba(0, 0, 0, 0.08);
+$shadow-card-hover: 0 10px 24px rgba(0, 0, 0, 0.12);
 
 
+// ---- NAVBAR ----
 
-// === Mixin (definisci almeno @mixin card-elevata o equivalente) ===
+// Navbar e footer marrone scuro al posto del nero
+.bg-dark {
+  background-color: $brand-secondary !important; //sempre la stessa regola ussata in css
+}
 
+// Resta attaccata in alto mentre scorri
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1020;
 
-
-// === Override Bootstrap (sovrascrivi .btn-primary, .bg-primary, .text-primary col tuo colore brand) ===
-
-
-
-// === Stili custom delle sezioni (header sticky, hero, servizi, contatti, footer) ===
+  // I link diventano bianchi col mouse sopra
+  .nav-link:hover {
+    color: white;
+  }
+}

@@ -1,0 +1,12 @@
+.bg-dark {
+  background-color: hsl(20, 20%, 15%) !important;/*vince Bootstrap senza questo comando*/
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1020;
+}
+header .nav-link:hover {
+  color: white;
+}
