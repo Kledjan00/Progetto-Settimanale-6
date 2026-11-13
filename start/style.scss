@@ -63,3 +63,37 @@ header {
 #studio {
   min-height: 80vh;
 }
+
+
+// ---- SERVIZI ----
+
+// La card con l'ombra che sale col mouse sopra
+@mixin card-elevata {
+  border-radius: $radius-base;
+  box-shadow: $shadow-card;
+  transition: transform 200ms ease, box-shadow 200ms ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: $shadow-card-hover;
+  }
+}
+
+#servizi {
+  .card {
+    @include card-elevata;
+  }
+
+  // Le icone grandi sopra il titolo
+  .bi {
+    font-size: 3rem;
+  }
+}
+
+
+// ---- LINK ALLE SEZIONI ----
+
+// Coi link le sezioni si fermano sotto la navbar (alta 56px)
+section {
+  scroll-margin-top: 56px;
+}

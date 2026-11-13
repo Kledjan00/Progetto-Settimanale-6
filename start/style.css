@@ -27,3 +27,20 @@ header .nav-link:hover {
 #studio {
   min-height: 80vh;
 }
+
+#servizi .card {
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+#servizi .card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+}
+#servizi .bi {
+  font-size: 3rem;
+}
+
+section {
+  scroll-margin-top: 56px;
+}
