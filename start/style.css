@@ -24,7 +24,8 @@ header .nav-link:hover {
   border-color: hsl(20, 30%, 27%) !important;
 }
 
-#studio {
+#studio,
+#grazie {
   min-height: 80vh;
 }
 
@@ -51,4 +52,32 @@ footer a {
 }
 footer a:hover {
   color: hsl(40, 30%, 90%);
+}
+
+#interruttore .bi-sun-fill {
+  display: none;
+}
+
+body.dark {
+  color: #f0f0f0;
+  background-color: hsl(20, 15%, 10%);
+}
+body.dark .bg-dark {
+  background-color: hsl(20, 20%, 6%) !important;
+}
+body.dark .bg-light {
+  background-color: hsl(20, 15%, 15%) !important;
+}
+body.dark .text-muted {
+  color: hsl(20, 10%, 70%) !important;
+}
+body.dark #servizi .card {
+  color: #f0f0f0;
+  background-color: hsl(20, 15%, 15%);
+}
+body.dark #interruttore .bi-moon-fill {
+  display: none;
+}
+body.dark #interruttore .bi-sun-fill {
+  display: inline;
 }

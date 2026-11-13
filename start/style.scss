@@ -19,6 +19,13 @@ $radius-base: 8px;
 $shadow-card: 0 2px 6px rgba(0, 0, 0, 0.08);
 $shadow-card-hover: 0 10px 24px rgba(0, 0, 0, 0.12);
 
+// I colori del tema scuro, sempre sul marrone
+$dark-sfondo: hsl(20, 15%, 10%);
+$dark-riquadri: hsl(20, 15%, 15%);
+$dark-barre: hsl(20, 20%, 6%);
+$dark-testo: #f0f0f0;
+$dark-testo-grigio: hsl(20, 10%, 70%);
+
 
 // ---- NAVBAR ----
 
@@ -59,8 +66,9 @@ header {
   }
 }
 
-// Il bannerone prende l'80% dello schermo
-#studio {
+// Il bannerone prende l'80% dello schermo (anche quello della pagina di grazie)
+#studio,
+#grazie {
   min-height: 80vh;
 }
 
@@ -110,5 +118,52 @@ footer {
     &:hover {
       color: $link-footer-hover;
     }
+  }
+}
+
+
+// ---- BOTTONE TEMA ----
+
+// In chiaro si vede solo la luna
+#interruttore .bi-sun-fill {
+  display: none;
+}
+
+
+// ---- TEMA SCURO ----
+
+// .dark sul body la mette il JS
+body.dark {
+  color: $dark-testo;
+  background-color: $dark-sfondo;
+
+  // Navbar e footer ancora più scuri
+  .bg-dark {
+    background-color: $dark-barre !important;
+  }
+
+  // La sezione Contattaci un po' più chiara dello sfondo
+  .bg-light {
+    background-color: $dark-riquadri !important;
+  }
+
+  // I testi grigi più chiari, sennò non si leggono
+  .text-muted {
+    color: $dark-testo-grigio !important;
+  }
+
+  // Le card scure col testo chiaro
+  #servizi .card {
+    color: $dark-testo;
+    background-color: $dark-riquadri;
+  }
+
+  // In scuro si vede solo il sole
+  #interruttore .bi-moon-fill {
+    display: none;
+  }
+
+  #interruttore .bi-sun-fill {
+    display: inline;
   }
 }

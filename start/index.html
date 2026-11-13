@@ -33,6 +33,12 @@
               <li class="nav-item"><a class="nav-link" href="#servizi">Servizi</a></li>
               <li class="nav-item"><a class="nav-link" href="#contatti">Contatti</a></li>
             </ul>
+
+            <!-- Bottone del tema: luna in chiaro, sole in scuro -->
+            <button type="button" class="btn btn-outline-light rounded-circle ms-md-3 mb-2 mb-md-0" id="interruttore" aria-label="Cambia tema">
+              <i class="bi bi-moon-fill"></i>
+              <i class="bi bi-sun-fill"></i>
+            </button>
           </div>
 
         </div>
@@ -94,7 +100,7 @@
       </div>
     </section>
 
-    <!-- Il form non prende tutta la pagina -->
+    <!-- Il form non prende tutta la pagina, 'Invia' apre il grazie in una nuova scheda -->
     <section id="contatti" class="py-5 bg-light">
       <div class="container">
 
@@ -105,7 +111,7 @@
 
         <div class="row">
           <div class="col-12 col-md-8 col-lg-6 mx-auto">
-            <form>
+            <form action="grazie.html" target="_blank">
 
               <div class="mb-3">
                 <label for="nome" class="form-label">Nome</label>
