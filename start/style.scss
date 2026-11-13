@@ -97,3 +97,18 @@ header {
 section {
   scroll-margin-top: 56px;
 }
+
+
+// ---- FOOTER ----
+
+footer {
+  a {
+    color: white;
+    text-decoration: none;
+
+    // Col mouse sopra diventano crema
+    &:hover {
+      color: $link-footer-hover;
+    }
+  }
+}
