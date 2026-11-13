@@ -38,3 +38,28 @@ header {
     color: white;
   }
 }
+
+
+// ---- HERO ----
+
+// Il bannerone marrone al posto del blu
+.bg-primary {
+  background-color: $brand-primary !important;
+}
+
+// Anche i bottoni marroni al posto del blu
+.btn-primary {
+  background-color: $brand-primary !important;
+  border-color: $brand-primary !important;
+
+  // Col mouse sopra si scuriscono
+  &:hover {
+    background-color: $brand-hover !important;
+    border-color: $brand-hover !important;
+  }
+}
+
+// Il bannerone prende l'80% dello schermo
+#studio {
+  min-height: 80vh;
+}

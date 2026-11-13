@@ -10,3 +10,20 @@ header {
 header .nav-link:hover {
   color: white;
 }
+
+.bg-primary {
+  background-color: hsl(20, 30%, 35%) !important;
+}
+
+.btn-primary {
+  background-color: hsl(20, 30%, 35%) !important;
+  border-color: hsl(20, 30%, 35%) !important;
+}
+.btn-primary:hover {
+  background-color: hsl(20, 30%, 27%) !important;
+  border-color: hsl(20, 30%, 27%) !important;
+}
+
+#studio {
+  min-height: 80vh;
+}
