@@ -31,7 +31,8 @@
             <ul class="navbar-nav ms-auto">
               <li class="nav-item"><a class="nav-link" href="#studio">Studio</a></li>
               <li class="nav-item"><a class="nav-link" href="#servizi">Servizi</a></li>
-              <li class="nav-item"><a class="nav-link" href="#contatti">Contatti</a></li>
+              <!-- Contatti non porta giù: apre la modale col form -->
+              <li class="nav-item"><a class="nav-link" href="#modale-contatti" data-bs-toggle="modal">Contatti</a></li>
             </ul>
 
             <!-- Bottone del tema: luna in chiaro, sole in scuro -->
@@ -50,8 +51,8 @@
       <div class="container">
         <h1 class="fw-bold mb-3">Architettura per spazi che parlano</h1>
         <p class="fs-5 mb-4">Progettiamo case, uffici e spazi commerciali con attenzione alla luce, ai materiali e al contesto.</p>
-        <!-- Porta giù al form -->
-        <a href="#contatti" class="btn btn-primary btn-lg">Inizia un progetto</a>
+        <!-- Apre la modale col form -->
+        <a href="#modale-contatti" class="btn btn-primary btn-lg" data-bs-toggle="modal">Inizia un progetto</a>
       </div>
     </section>
 
@@ -100,27 +101,29 @@
       </div>
     </section>
 
-    <!-- Il form non prende tutta la pagina, 'Invia' apre il grazie in una nuova scheda -->
-    <section id="contatti" class="py-5 bg-light">
-      <div class="container">
+    <!-- La modale col form: nella pagina non si vede, la aprono "Inizia un progetto" e "Contatti". 'Invia' apre il grazie in una nuova scheda -->
+    <div class="modal fade" id="modale-contatti" tabindex="-1" aria-labelledby="titolo-contatti" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
 
-        <div class="text-center mb-4">
-          <h2 class="fw-bold">Contattaci</h2>
-          <p class="text-muted mb-0">Compila il form, ti rispondiamo entro 48 ore.</p>
-        </div>
+          <div class="modal-header">
+            <h2 class="modal-title fs-5 fw-bold" id="titolo-contatti">Contattaci</h2>
+            <button type="button" class="btn-close" id="crocetta" data-bs-dismiss="modal" aria-label="Chiudi"></button>
+          </div>
 
-        <div class="row">
-          <div class="col-12 col-md-8 col-lg-6 mx-auto">
-            <form action="grazie.html" target="_blank">
+          <div class="modal-body">
+            <p class="text-muted">Compila il form, ti rispondiamo entro 48 ore.</p>
+
+            <form action="grazie.html" target="_blank" id="modulo">
 
               <div class="mb-3">
                 <label for="nome" class="form-label">Nome</label>
-                <input type="text" class="form-control" id="nome" name="nome">
+                <input type="text" class="form-control" id="nome" name="nome" required>
               </div>
 
               <div class="mb-3">
                 <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" name="email">
+                <input type="email" class="form-control" id="email" name="email" required>
               </div>
 
               <div class="mb-3">
@@ -141,10 +144,10 @@
 
             </form>
           </div>
-        </div>
 
+        </div>
       </div>
-    </section>
+    </div>
 
     <!-- 3 colonne, in fondo il copyright sotto la riga -->
     <footer class="bg-dark text-white py-5">
@@ -161,7 +164,7 @@
             <ul class="list-unstyled">
               <li><a href="#studio">Studio</a></li>
               <li><a href="#servizi">Servizi</a></li>
-              <li><a href="#contatti">Contatti</a></li>
+              <li><a href="#modale-contatti" data-bs-toggle="modal">Contatti</a></li>
             </ul>
           </div>
 

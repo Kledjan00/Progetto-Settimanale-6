@@ -142,11 +142,6 @@ body.dark {
     background-color: $dark-barre !important;
   }
 
-  // La sezione Contattaci un po' più chiara dello sfondo
-  .bg-light {
-    background-color: $dark-riquadri !important;
-  }
-
   // I testi grigi più chiari, sennò non si leggono
   .text-muted {
     color: $dark-testo-grigio !important;
@@ -156,6 +151,17 @@ body.dark {
   #servizi .card {
     color: $dark-testo;
     background-color: $dark-riquadri;
+  }
+
+  // Anche la modale del form scura come le card (i campi restano bianchi)
+  .modal-content {
+    color: $dark-testo;
+    background-color: $dark-riquadri;
+  }
+
+  // La X per chiudere la modale diventa bianca
+  .btn-close {
+    filter: invert(1);
   }
 
   // In scuro si vede solo il sole
